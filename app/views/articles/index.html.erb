@@ -1,15 +1,28 @@
-<h1>Articles</h1>
+<h1 class='welcome'>WELCOME TO MY BLOG</h1>
 
-Our blog has <%= Article.public_count %> articles and counting!
+<p class='counter'>Our blog has <%= Article.public_count %> articles and counting!</p>
 
-<ul>
+<ul class='titles'>
   <% @articles.each do |article| %>
     <% unless article.archived? %>
-      <li>
-        <%= link_to article.title, article %>
-      </li>
+      <article class='article-container'>
+        <li class='article'>
+          <%= link_to article.title, article, class: 'title' %>
+          <p class='excerpt'>
+            <% if article.body.length > 50 %>
+              <%= article.body[0..49] + '...' %>
+            <% else %>
+              <%= article.body %>
+            <% end %>
+          </p>
+          <p class='created'>Created: <%= article.created_at.strftime("%d/%m/%Y") %></p>
+          <p class='modified'>Last modified: <%= article.updated_at.strftime("%d/%m/%Y") %> </p>
+        </li>
+      </article><br>
     <% end %>
   <% end %>
 </ul>
 
-<%= link_to "New Article", new_article_path %>
+<%= link_to "New Article", new_article_path, class: 'new_article' %>
+
+<%= render "footer" %>
