@@ -4,20 +4,25 @@
 $bg1: url("background_1.png");
 $bg2: url("background_2.jpg");
 $title-font: 'RocknRoll One', sans-serif;
+$text-font: 'Montserrat', sans-serif;
 
 body {
 	background: $bg1 rgb(52, 91, 199);
 }
 
 .container {
-	position: absolute;
+	// position: absolute;
+	// top: 2%;
+	// left: 20%;
 	text-align: center;
-	top: 2%;
-	left: 20%;
 	border: 5px solid black;
 	background: $bg2 white center / 110%;
-	height: auto;
+	min-height: 100vh;
 	width: 60vw;
+	font-family: $text-font;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
 
 	.welcome {
 		padding: 24px 0;
@@ -63,29 +68,41 @@ body {
 
 				.created {
 					grid-row: 2 / 3;
+					align-self: end;
 				}
 
 				.modified {
 					grid-row: 3 / 4;
+					align-self: start;
 				}
 
 				.created, .modified {
 					margin-right: 5px;
 					grid-column: 2 / 3;
 					justify-self: end;
+					font-size: small;
 				}
 			}
 		}
 	}
 
-	.new_article {
-		margin: 25px 25px;
+	.new-article {
+		align-self: center;
+		margin-bottom: 20px;
+		a { 
+			text-decoration: none;
+			color: white;
+			background: rgb(43, 43, 160);
+			font-weight: bold;
+			border: 1px solid black;
+			padding: 15px;
+			&:hover { background: rgb(76, 76, 250); }
+		}
 	}
 }
 
 footer {
-	position: absolute;
-	bottom: 0;
-	right: 0.5%;
 	font-size: small;
+	text-align: right;
+	margin-right: 5px;
 }
