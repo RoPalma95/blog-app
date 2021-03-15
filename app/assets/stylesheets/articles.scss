@@ -9,7 +9,8 @@ $text-font: 'Montserrat', sans-serif;
 body {
 	background: $bg1 rgb(52, 91, 199);
 
-	a { text-decoration: none;
+	a {
+		text-decoration: none;
 		color: black;
 	}
 }
@@ -113,7 +114,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 
-		a {
+		.button {
 			border: 1px solid black;
 			border-radius: 8px;
 			margin: 0 10px;
@@ -124,6 +125,63 @@ body {
 			&:hover { background: rgb(76, 76, 250); }
 		}
 	}
+
+	.cancel, .back{
+		width: 10%;
+		margin: 50px 0 0 85%;
+		border: 1px solid black;
+		border-radius: 8px;
+		padding: 5px;
+		font-weight: bold;
+		color: white;
+		background: rgb(43, 43, 160);
+		&:hover { background: rgb(76, 76, 250); }
+	}
+
+	form {
+		height: 60vh;
+
+		label {
+			font-weight: bolder;
+			font-size: 25px;
+		}
+
+		.form-title { input { width: 60%; } }
+
+		.form-body {
+			margin-top: 10px;
+			height: 60%;
+			
+			textarea {
+				width: 60%;
+				height: 80%;
+			}
+		}
+
+		.form-status {
+			select { margin-bottom: 20px; }
+		}
+
+		.submit {
+			input {
+
+				border: 1px solid black;
+				border-radius: 8px;
+				padding: 5px;
+				font-weight: bold;
+				color: white;
+				background: rgb(43, 43, 160);
+				&:hover { background: rgb(76, 76, 250); }
+			}
+		}
+	}
+
+	.back {
+		width: auto;
+		margin: 25px auto;
+	}
+
+
 }
 
 footer {

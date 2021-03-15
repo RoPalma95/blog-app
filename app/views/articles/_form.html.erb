@@ -1,5 +1,5 @@
 <%= form_with model: article do |form| %>
-  <div>
+  <div class='form-title'>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
     <% article.errors.full_messages_for(:title).each do |message| %>
@@ -7,7 +7,7 @@
     <% end %>
   </div>
 
-  <div>
+  <div class='form-body'>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
     <% article.errors.full_messages_for(:body).each do |message| %>
@@ -15,12 +15,12 @@
     <% end %>
   </div>
 
-  <div>
+  <div class='form-status'>
     <%= form.label :status %><br>
     <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
   </div>
 
-  <div>
+  <div class='submit'>
     <%= form.submit %>
   </div>
 <% end %>
