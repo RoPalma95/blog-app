@@ -8,12 +8,13 @@ $text-font: 'Montserrat', sans-serif;
 
 body {
 	background: $bg1 rgb(52, 91, 199);
+
+	a { text-decoration: none;
+		color: black;
+	}
 }
 
 .container {
-	// position: absolute;
-	// top: 2%;
-	// left: 20%;
 	text-align: center;
 	border: 5px solid black;
 	background: $bg2 white center / 110%;
@@ -24,14 +25,14 @@ body {
 	flex-direction: column;
 	margin: auto;
 
-	.welcome {
+	.welcome, .show-title {
 		padding: 24px 0;
 		background-color: rgba(18, 223, 223, 0.767);
 		border-bottom: 2px solid rgb(55, 158, 206);
 		font-family: $title-font;
 	}
 	
-	.counter {
+	.counter, .body {
 		margin: 25px auto;
 	}
 
@@ -56,8 +57,6 @@ body {
 					font-family: $title-font;
 					font-size: 30px;
 					font-weight: bold;
-					color: black;
-					text-decoration: none;
 					&:hover { color: rgb(54, 54, 54); }
 				}
 
@@ -90,12 +89,38 @@ body {
 		align-self: center;
 		margin-bottom: 20px;
 		a { 
-			text-decoration: none;
 			color: white;
 			background: rgb(43, 43, 160);
 			font-weight: bold;
 			border: 1px solid black;
 			padding: 15px;
+			&:hover { background: rgb(76, 76, 250); }
+		}
+	}
+
+	.body {
+		align-self: center;
+		font-size: 20px;
+		text-align: justify;
+		margin: 25px 0; 
+		padding: 0 15px;
+	}
+
+	.actions {
+		list-style: none;
+		align-self: flex-end;
+		margin-right: 10px;
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			border: 1px solid black;
+			border-radius: 8px;
+			margin: 0 10px;
+			padding: 5px;
+			font-weight: bold;
+			color: white;
+			background: rgb(43, 43, 160);
 			&:hover { background: rgb(76, 76, 250); }
 		}
 	}
@@ -105,4 +130,8 @@ footer {
 	font-size: small;
 	text-align: right;
 	margin-right: 5px;
+	a { 
+		text-decoration: underline;
+		color: white;
+	}
 }

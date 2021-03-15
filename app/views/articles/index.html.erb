@@ -18,12 +18,10 @@
           <p class='created'>Created: <%= article.created_at.strftime("%d/%m/%Y") %></p>
           <p class='modified'>Last modified: <%= article.updated_at.strftime("%d/%m/%Y") %> </p>
         </li>
-      </article><br>
+      </article><br/>
     <% end %>
   <% end %>
 </ul>
 
 
 <p class='new-article'><%= link_to "New Article", new_article_path %></p>
-
-<%= render "footer" %>
