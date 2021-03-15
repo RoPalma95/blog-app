@@ -1,17 +1,19 @@
 <% unless comment.archived? %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
+  <div class='comments'>
+    <p class='commenter'>
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
+    </p>
 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
+    <p class='comment'>
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </p>
 
-  <p>
-    <%= link_to 'Destroy Comment', [comment.article, comment],
-                method: :delete,
-                data: { confirm: "Are you sure?" } %>
-  </p>
+    <p class='button'>
+      <%= link_to 'Delete Comment', [comment.article, comment],
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+    </p>
+  </div>
 <% end %>

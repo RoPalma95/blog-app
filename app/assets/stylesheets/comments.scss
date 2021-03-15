@@ -1,3 +1,72 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.comments {
+	display: grid;
+	grid-template-rows: 30px 1fr;
+	grid-template-columns: 4fr 1fr;
+	margin: 10px 15px;
+	padding: 5px 0 5px 5px;
+	border: 3px solid black;
+	border-radius: 4px;
+	background-color: rgb(135, 222, 179);
+
+	.commenter,  .comment  {
+		grid-column: 1 / 2;
+		justify-self: start;
+		text-align: left;
+	}
+
+	.button {
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
+		place-self: center;
+		border: 1px solid black;
+		border-radius: 8px;
+		width: 70%;
+		word-wrap: break-word;
+		background: rgb(43, 43, 160);
+		&:hover { background: rgb(76, 76, 250); }
+
+		a {
+			font-weight: bold;
+			color: white;
+		}
+	}
+}
+
+.form-comments {
+	margin-top: 10px;
+	height: 50vh;
+	
+	label {
+		font-weight: bolder;
+		font-size: 25px;
+	}
+
+	.form-commenter { input { width: 60%; } }
+
+	.form-comment {
+		margin-top: 15px;
+		height: 40%;
+
+		textarea {
+			height: 70%;
+			width: 60%;
+		}
+	}
+
+	.submit-comment {
+		margin-top: 25px;
+
+		input {
+			border: 1px solid black;
+			border-radius: 8px;
+			padding: 5px;
+			font-weight: bold;
+			color: white;
+			background: rgb(43, 43, 160);
+			&:hover { background: rgb(76, 76, 250); }
+		}
+	}
+}

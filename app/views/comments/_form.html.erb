@@ -1,17 +1,17 @@
-<%= form_with model: [@article, @article.comments.build] do |form| %>
-  <p>
+<%= form_with model: [@article, @article.comments.build], class: 'form-comments' do |form| %>
+  <div class='form-commenter'>
     <%= form.label :commenter %><br>
     <%= form.text_field :commenter %>
-  </p>
-  <p>
+  </div>
+  <div class='form-comment'>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
-  </p>
-  <p>
+  </div>
+  <div class='comment-status'>
     <%= form.label :status %><br>
     <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
-  </p>
-  <p>
+  </div>
+  <div class='submit-comment'>
     <%= form.submit %>
-  </p>
+  </div>
 <% end %>

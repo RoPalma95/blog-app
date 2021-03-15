@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $bg1: url("background_1.png");
-$bg2: url("background_2.jpg");
 $title-font: 'RocknRoll One', sans-serif;
 $text-font: 'Montserrat', sans-serif;
 
@@ -18,7 +17,7 @@ body {
 .container {
 	text-align: center;
 	border: 5px solid black;
-	background: $bg2 white center / 110%;
+	background: white;
 	min-height: 100vh;
 	width: 60vw;
 	font-family: $text-font;
@@ -138,7 +137,7 @@ body {
 		&:hover { background: rgb(76, 76, 250); }
 	}
 
-	form {
+	.form-article {
 		height: 60vh;
 
 		label {
@@ -164,7 +163,6 @@ body {
 
 		.submit {
 			input {
-
 				border: 1px solid black;
 				border-radius: 8px;
 				padding: 5px;
@@ -177,19 +175,7 @@ body {
 	}
 
 	.back {
-		width: auto;
-		margin: 25px auto;
-	}
-
-
-}
-
-footer {
-	font-size: small;
-	text-align: right;
-	margin-right: 5px;
-	a { 
-		text-decoration: underline;
-		color: white;
+		margin-top: 0;
+		margin-bottom: 25px;
 	}
 }
